@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { name: "Home", href: "#hero-section" },
+  { name: "Home", href: "#hero-section" },  
   { name: "About RARE", href: "#about-section" },
   { name: "Services", href: "#services-section" },
   { name: "Industry", href: "#industry-section" },
@@ -109,23 +109,18 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden fixed top-16 left-0 right-0 z-[70] bg-white shadow-2xl border-t border-gray-200">
-          <div className="px-6 py-8 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            {/* Debug Info */}
-            <div className="text-xs text-gray-500 mb-4">
-              Mobile menu is open. Links count: {navLinks.length}
-            </div>
-            
+          <div className="px-4 py-4 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
             {/* Navigation Links */}
-            <div className="space-y-2">
+            <div className="space-y-1">
               {navLinks.map((link, index) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
-                  className="block text-[#444] text-[18px] font-medium px-4 py-3 rounded-xl transition-all duration-300 hover:bg-[#f3eafd] hover:text-[#791E79] hover:scale-105 hover:shadow-md border border-transparent hover:border-[#f3eafd] cursor-pointer"
+                  className="block text-[#444] text-[16px] font-medium px-3 py-2.5 rounded-lg transition-all duration-300 hover:bg-[#f3eafd] hover:text-[#791E79] hover:scale-105 hover:shadow-sm border border-transparent hover:border-[#f3eafd] cursor-pointer"
                   style={{
-                    animationDelay: `${index * 100}ms`,
-                    animation: 'slideInFromTop 0.3s ease-out forwards'
+                    animationDelay: `${index * 50}ms`,
+                    animation: 'slideInFromTop 0.2s ease-out forwards'
                   }}
                 >
                   {link.name}
@@ -134,9 +129,9 @@ export default function Navbar() {
             </div>
             
             {/* CTA Button */}
-            <div className="pt-4 border-t border-gray-200 mt-6">
+            <div className="pt-3 border-t border-gray-200 mt-3">
               <button
-                className="w-full relative inline-flex items-center justify-center bg-[#791E79] rounded-full px-6 py-4 text-white font-medium text-[16px] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#791E79] focus:ring-offset-2 hover:scale-105 hover:shadow-lg active:scale-95"
+                className="w-full relative inline-flex items-center justify-center bg-[#791E79] rounded-full px-4 py-2.5 text-white font-medium text-[14px] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#791E79] focus:ring-offset-2 hover:scale-105 hover:shadow-lg active:scale-95"
                 style={{ 
                   fontFamily: 'inherit',
                   background: 'linear-gradient(180deg, #8B2A8B 0%, #791E79 50%, #6B1A6B 100%)',
