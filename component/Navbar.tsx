@@ -88,13 +88,14 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex flex-col items-center justify-center w-10 h-10 space-y-1.5 p-2 rounded-lg hover:bg-gray-100 transition-all duration-300"
+          className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5 p-0 bg-transparent shadow-none border-none outline-none focus:outline-none hover:bg-gray-100 transition-all duration-200"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
+          style={{ background: 'none', boxShadow: 'none' }}
         >
-          <span className={`w-6 h-0.5 bg-[#791E79] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`w-6 h-0.5 bg-[#791E79] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`w-6 h-0.5 bg-[#791E79] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <span className={`w-5 h-0.5 bg-[#791E79] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+          <span className={`w-5 h-0.5 bg-[#791E79] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`w-5 h-0.5 bg-[#791E79] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
         </button>
       </div>
 
